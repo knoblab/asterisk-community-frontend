@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <!-- Dark Mesh Gradients -->
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1c1d22"/>
+      <stop offset="50%" stop-color="#121316"/>
+      <stop offset="100%" stop-color="#090a0c"/>
+    </linearGradient>
+    
+    <radialGradient id="glow-red-main" cx="950" cy="180" r="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.28"/>
+      <stop offset="50%" stop-color="#ad1d1d" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#090a0c" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="glow-red-bottom" cx="200" cy="520" r="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#090a0c" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="brand-grad" x1="120" y1="100" x2="390" y2="390" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f87171"/>
+      <stop offset="45%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#991b1b"/>
+    </linearGradient>
+
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255, 255, 255, 0.04)" stroke-width="1"/>
+    </pattern>
+
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#ef4444" flood-opacity="0.4"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="630" fill="url(#bg-grad)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <circle cx="950" cy="180" r="500" fill="url(#glow-red-main)"/>
+  <circle cx="200" cy="520" r="400" fill="url(#glow-red-bottom)"/>
+
+  <!-- Outer Frame Bevel -->
+  <rect width="1196" height="626" x="2" y="2" rx="20" fill="none" stroke="rgba(255, 255, 255, 0.12)" stroke-width="2"/>
+
+  <!-- Left Logo Icon (Scaled Emblem) -->
+  <g transform="translate(100, 135) scale(0.48)" filter="url(#shadow)">
+    <rect width="512" height="512" rx="128" fill="#18191c" stroke="rgba(255, 255, 255, 0.15)" stroke-width="4"/>
+    <path d="M 355 305 C 385 262 385 202 345 162 C 298 115 198 115 152 162 C 105 210 110 300 162 345 C 205 382 272 380 315 348 L 382 388 C 390 393 398 385 394 376 L 355 305 Z" 
+          fill="url(#brand-grad)" 
+          stroke="rgba(255, 255, 255, 0.3)" 
+          stroke-width="4" 
+          stroke-linejoin="round"/>
+    <circle cx="205" cy="238" r="16" fill="#ffffff"/>
+    <circle cx="256" cy="238" r="16" fill="#ffffff"/>
+    <circle cx="307" cy="238" r="16" fill="#ffffff"/>
+  </g>
+
+  <!-- Typography Content -->
+  <!-- Main Title -->
+  <text x="380" y="225" font-family="'Inter', 'Pretendard', sans-serif" font-weight="800" font-size="72" fill="#ffffff" letter-spacing="-1.5">Knoblab Community</text>
+  
+  <!-- Red Badge Pill -->
+  <rect x="910" y="172" width="180" height="42" rx="21" fill="rgba(239, 68, 68, 0.18)" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="1000" y="199" font-family="'Inter', sans-serif" font-weight="700" font-size="14" fill="#fca5a5" text-anchor="middle" letter-spacing="1.2">OFFICIAL BOARD</text>
+
+  <!-- Subtitle -->
+  <text x="380" y="285" font-family="'Pretendard', 'Inter', sans-serif" font-weight="600" font-size="32" fill="#ef4444">충남과학고 커뮤니티 게시판</text>
+  
+  <!-- Description -->
+  <text x="380" y="340" font-family="'Pretendard', 'Inter', sans-serif" font-weight="400" font-size="22" fill="#9ca3af">충남과학고 학생들을 위한 자유로운 소통과 정보 공유 공간</text>
+
+  <!-- Bottom Feature Cards -->
+  <!-- Card 1 -->
+  <g transform="translate(100, 440)">
+    <rect width="315" height="110" rx="16" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+    <circle cx="45" cy="55" r="24" fill="rgba(239, 68, 68, 0.15)" stroke="rgba(239, 68, 68, 0.4)" stroke-width="1"/>
+    <text x="45" y="63" font-size="22" text-anchor="middle">💬</text>
+    <text x="85" y="48" font-family="'Pretendard', sans-serif" font-weight="700" font-size="18" fill="#ffffff">자유 게시판</text>
+    <text x="85" y="74" font-family="'Pretendard', sans-serif" font-weight="400" font-size="14" fill="#9ca3af">다양한 주제의 이야기 공유</text>
+  </g>
+
+  <!-- Card 2 -->
+  <g transform="translate(442, 440)">
+    <rect width="315" height="110" rx="16" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+    <circle cx="45" cy="55" r="24" fill="rgba(239, 68, 68, 0.15)" stroke="rgba(239, 68, 68, 0.4)" stroke-width="1"/>
+    <text x="45" y="63" font-size="22" text-anchor="middle">⚡</text>
+    <text x="85" y="48" font-family="'Pretendard', sans-serif" font-weight="700" font-size="18" fill="#ffffff">정보 &amp; Q&amp;A</text>
+    <text x="85" y="74" font-family="'Pretendard', sans-serif" font-weight="400" font-size="14" fill="#9ca3af">빠르고 정확한 답변과 자료</text>
+  </g>
+
+  <!-- Card 3 -->
+  <g transform="translate(784, 440)">
+    <rect width="316" height="110" rx="16" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+    <circle cx="45" cy="55" r="24" fill="rgba(239, 68, 68, 0.15)" stroke="rgba(239, 68, 68, 0.4)" stroke-width="1"/>
+    <text x="45" y="63" font-size="22" text-anchor="middle">🎓</text>
+    <text x="85" y="48" font-family="'Pretendard', sans-serif" font-weight="700" font-size="18" fill="#ffffff">충남과학고 인증계정</text>
+    <text x="85" y="74" font-family="'Pretendard', sans-serif" font-weight="400" font-size="14" fill="#9ca3af">안전하고 신뢰받는 커뮤니티</text>
+  </g>
+</svg>
