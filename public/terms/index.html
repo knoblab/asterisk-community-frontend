@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>asterisk* 서비스 이용약관 (Terms of Service)</title>
+  <meta name="description" content="충남과학고등학교 학생 생활을 위한 통합 디지털 생태계 asterisk* (cnsh.life & cnsh.space) 서비스 이용약관" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Asta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+
+  <style>
+    :root {
+      --color-black: #000000;
+      --color-carbon: #1C1C1E;
+      --color-graphite: #48484A;
+      --color-telemetry: #8E8E93;
+      --color-silver: #D1D1D6;
+      --color-vellum: #EBE9E1;
+      --color-paper: #F7F6F2;
+      --font-brand: 'Asta Sans', sans-serif;
+      --font-body: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --color-black: #F7F6F2;
+        --color-carbon: #EBE9E1;
+        --color-graphite: #A0A19B;
+        --color-telemetry: #77777A;
+        --color-silver: #2C2C2E;
+        --color-vellum: #18191C;
+        --color-paper: #0D0E10;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--color-paper);
+      color: var(--color-black);
+      font-family: var(--font-body);
+      line-height: 1.75;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 24px 100px;
+    }
+
+    header {
+      border-bottom: 2px solid var(--color-black);
+      padding-bottom: 24px;
+      margin-bottom: 40px;
+    }
+
+    .brand-mark {
+      font-family: var(--font-brand);
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      color: var(--color-black);
+      margin-bottom: 12px;
+    }
+
+    .brand-mark span.asterisk {
+      color: var(--color-black);
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+
+    .meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 13px;
+      color: var(--color-telemetry);
+      margin-top: 12px;
+    }
+
+    .meta-bar span strong {
+      color: var(--color-graphite);
+    }
+
+    .toc {
+      background-color: var(--color-vellum);
+      border: 1px solid var(--color-silver);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+    }
+
+    .toc-title {
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .toc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 8px 16px;
+      font-size: 13px;
+    }
+
+    .toc-grid a {
+      color: var(--color-carbon);
+      text-decoration: none;
+    }
+
+    .toc-grid a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      margin-bottom: 48px;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      border-bottom: 1px solid var(--color-silver);
+      padding-bottom: 8px;
+      margin-top: 36px;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-top: 24px;
+      margin-bottom: 10px;
+      color: var(--color-carbon);
+    }
+
+    p {
+      margin-bottom: 14px;
+      color: var(--color-carbon);
+      word-break: keep-all;
+    }
+
+    ul, ol {
+      margin-left: 20px;
+      margin-bottom: 16px;
+      color: var(--color-carbon);
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .badge-service {
+      display: inline-block;
+      padding: 2px 8px;
+      background: var(--color-silver);
+      color: var(--color-black);
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: var(--font-brand);
+      margin-right: 6px;
+    }
+
+    .box-notice {
+      background-color: var(--color-vellum);
+      border-left: 4px solid var(--color-black);
+      padding: 16px 20px;
+      border-radius: 0 6px 6px 0;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+
+    footer {
+      border-top: 1px solid var(--color-silver);
+      padding-top: 32px;
+      margin-top: 60px;
+      font-size: 13px;
+      color: var(--color-telemetry);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    @media print {
+      body {
+        background: white;
+        color: black;
+      }
+      .toc, .btn-back {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="/" class="brand-mark">
+        asterisk<span class="asterisk">*</span>
+      </a>
+      <h1>서비스 통합 이용약관</h1>
+      <p style="color: var(--color-graphite); font-size: 14px;">
+        충남과학고등학교 학생 자율 디지털 서비스 생태계 (cnsh.life & cnsh.space)
+      </p>
+      <div class="meta-bar">
+        <span><strong>제정 및 시행일:</strong> 2026년 11월 1일</span>
+        <span><strong>준용 표준:</strong> 정보통신산업진흥원(NIPA) 이용약관 표준 체계</span>
+        <span><strong>운영 주체:</strong> asterisk Contributors / Knoblab</span>
+      </div>
+    </header>
+
+    <nav class="toc">
+      <div class="toc-title">목차 (Table of Contents)</div>
+      <div class="toc-grid">
+        <a href="#ch1">제1장 총칙 (목적·정의·개정)</a>
+        <a href="#ch2">제2장 계약 체결 및 계정 관리</a>
+        <a href="#ch3">제3장 서비스 제공 (Life·Space·AI)</a>
+        <a href="#ch4">제4장 계약 당사자의 권리와 의무</a>
+        <a href="#ch5">제5장 계약 해지 및 이용 제한</a>
+        <a href="#ch6">제6장 손해배상 및 면책 조항</a>
+        <a href="#addendum">부칙 (시행일 및 경과조치)</a>
+      </div>
+    </nav>
+
+    <!-- 제1장 -->
+    <section id="ch1">
+      <h2>제1장 총칙</h2>
+      
+      <h3>제1조 (목적)</h3>
+      <p>
+        본 약관은 충남과학고등학교 학생 자율 디지털 서비스 생태계인 <strong>asterisk*</strong> 및 그 산하 서비스(학교생활 포털 <code>cnsh.life</code>, 재학생 커뮤니티 <code>cnsh.space</code>, <code>asterisk* AI</code> 등)를 운영하는 <strong>asterisk Contributors 및 Knoblab 운영진</strong>(이하 "운영진"이라 합니다)이 제공하는 모든 제반 서비스(이하 "서비스"라 합니다)의 이용 조건 및 절차, 이용자와 운영진의 권리, 의무, 책임사항 및 기타 필요한 사항을 규정함을 목적으로 합니다.
+      </p>
+      <div class="box-notice">
+        본 약관은 대한민국 관계 법령과 <strong>정보통신산업진흥원(NIPA)</strong> 홈페이지 표준 이용약관의 규율 체계 및 조항 체제를 준용하여 제정되었습니다.
+      </div>
+
+      <h3>제2조 (용어의 정의)</h3>
+      <ol>
+        <li><strong>"asterisk*"</strong>란 운영진이 기획·개발·배포하는 학내 디지털 통합 플랫폼 전체를 의미하며, 다음 각 목의 하위 서비스를 포함합니다.
+          <ul>
+            <li><strong><span class="badge-service">Life Track</span> cnsh.life:</strong> 충남과학고등학교의 실시간 시정표, NEIS(나이스) 연동 시간표·급식, 방과후 수업, 학교 공지, 천체·기상 관측 정보 등을 제공하는 무인증 기반 학교생활 정보 포털.</li>
+            <li><strong><span class="badge-service">Space Track</span> cnsh.space:</strong> 충남과학고등학교 재학생 및 인가된 구성원 간의 소통을 위한 고신뢰 커뮤니티 플랫폼으로, 학내 8대 게시판, KaTeX 수식 렌더링, 미디어 업로드 및 스트리밍 등을 제공하는 서비스.</li>
+            <li><strong><span class="badge-service">Intelligent Track</span> asterisk* AI:</strong> Space Track 내 탑재되어 Jev 의사결정 라우터를 통해 학내 데이터(급식, 시간표, 시정 등) 조회 및 대화형 질의응답을 보조하는 인공지능 에이전트 서비스.</li>
+          </ul>
+        </li>
+        <li><strong>"이용자"</strong>란 본 약관에 따라 운영진이 제공하는 서비스를 이용하는 회원 및 비회원을 통칭합니다.</li>
+        <li><strong>"회원"</strong>이란 Knoblab SSO 통합 계정 또는 충남과학고등학교 재학생 인증 절차를 거쳐 서비스에 개인정보를 등록하고 계정을 생성하여 Space Track 및 회원 전용 기능을 이용할 수 있는 권한을 부여받은 자를 의미합니다.</li>
+        <li><strong>"비회원"</strong>이란 회원가입을 하지 않고 Life Track(<code>cnsh.life</code>) 등 공개된 웹 인터페이스를 탐색·조회하는 자를 말합니다.</li>
+        <li><strong>"Knoblab SSO"</strong>란 asterisk* 생태계 내 서비스에 일괄 로그인 및 학내 구성원 신원(입학 기수 등)을 검증·연계하는 통합 인증 인프라를 의미합니다.</li>
+      </ol>
+
+      <h3>제3조 (약관의 명시, 효력 및 개정)</h3>
+      <ol>
+        <li>운영진은 본 약관의 내용을 이용자가 쉽게 알 수 있도록 서비스 초기 화면 또는 링크 페이지에 상시 게시합니다.</li>
+        <li>운영진은 관련 법령을 위배하지 않는 범위에서 본 약관을 개정할 수 있습니다.</li>
+        <li>약관을 개정할 경우에는 적용일자 및 개정 사유를 명시하여 적용일자 7일 전(회원에게 불리하거나 중대한 사항은 30일 전)부터 서비스 내에 공지합니다.</li>
+      </ol>
+
+      <h3>제4조 (약관 외 준칙)</h3>
+      <p>본 약관에 명시되지 아니한 사항에 대해서는 전기통신사업법, 정보통신망 이용촉진 및 정보보호 등에 관한 법률, 개인정보 보호법, 저작권법 등 대한민국 관계 법령 및 충남과학고등학교 학생생활규정에 따릅니다.</p>
+    </section>
+
+    <!-- 제2장 -->
+    <section id="ch2">
+      <h2>제2장 서비스 이용계약의 체결 및 계정 관리</h2>
+
+      <h3>제5조 (이용계약의 성립)</h3>
+      <p>이용계약은 회원이 되고자 하는 자가 본 약관에 동의하고 Knoblab SSO 또는 승인된 학적 인증 절차를 완료한 후 운영진이 이를 승낙함으로써 성립합니다. Life Track(<code>cnsh.life</code>)은 접속 및 이용 행위 자체로써 해당 기능의 이용 조건에 동의한 것으로 봅니다.</p>
+
+      <h3>제6조 (이용신청 및 승낙의 제한)</h3>
+      <p>운영진은 타인의 명의나 학번을 도용한 경우, 외부인이 비인가 목적으로 가입을 시도한 경우, 미풍양속 및 학내 질서를 교란할 목적인 경우 승낙을 거절하거나 사후에 이용계약을 해지할 수 있습니다.</p>
+
+      <h3>제7조 (회원 계정 및 비밀번호 관리책임)</h3>
+      <p>회원 계정(ID)과 비밀번호에 대한 관리 책임은 회원 본인에게 있으며 제3자에게 양도하거나 대여할 수 없습니다. 도난 또는 부정 사용을 인지한 경우 즉시 운영진에 통보하여야 합니다.</p>
+    </section>
+
+    <!-- 제3장 -->
+    <section id="ch3">
+      <h2>제3장 서비스의 제공 및 이용</h2>
+
+      <h3>제9조 (서비스의 내용 및 성격)</h3>
+      <p>운영진은 충남과학고등학교 학생들의 학습 및 일상 편의를 지원하기 위해 다음과 같은 서비스를 무상으로 제공합니다.</p>
+      <ul>
+        <li><strong>Life Track:</strong> 수·금·일 특수 시정표 카운트다운, NEIS 시간표·식단 연동, 방과후 수업 편성표, 학교 공지 프록시, 기상/천체 정보, PWA 지원.</li>
+        <li><strong>Space Track:</strong> Knoblab SSO 기수 배지 부여, 8대 게시판, KaTeX 수식, 최대 45MB 비디오 스트리밍(HTTP 206 Range).</li>
+        <li><strong>asterisk* AI:</strong> Jev 의사결정 라우터 기반 학내 데이터 도구 연계 및 대화형 질의응답.</li>
+      </ul>
+
+      <h3>제11조 (공공데이터 및 외부 연계 API 이용 고지)</h3>
+      <p>NEIS 시간표 및 급식 정보, 기상청 데이터 등은 외부 공개 API 소스를 기반으로 가공되어 제공되므로, 원천 기관의 사정에 따라 일시적 오류나 지연이 발생할 수 있습니다. 공식 학사일정은 반드시 학교 공식 채널을 교차 확인하시기 바랍니다.</p>
+
+      <h3>제12조 (asterisk* AI 이용 특칙)</h3>
+      <p>AI가 제공하는 답변은 LLM의 추론에 기반하므로 환각(오류)이 발생할 수 있으며 사실 여부를 확인할 책임은 이용자에게 있습니다. 학교 지필평가, 수행평가 등 공식 시험 시간 중 부정행위 도구로의 악용을 엄격히 금지합니다.</p>
+    </section>
+
+    <!-- 제4장 -->
+    <section id="ch4">
+      <h2>제4장 계약 당사자의 권리와 의무</h2>
+
+      <h3>제14조 (이용자의 의무 및 엄격한 금지행위)</h3>
+      <p>이용자는 다음 각 호의 행위를 하여서는 아니 됩니다.</p>
+      <ul>
+        <li>특정 학우, 교직원에 대한 비방, 모욕, 명예훼손, 음란물 및 폭력적 콘텐츠 유포</li>
+        <li>타인 학번 및 SSO 계정 도용, 재학생 자격 사칭, 기수 배지 위조</li>
+        <li>시스템 해킹, 악성코드 유포, 비정상적 트래픽 유발(DDoS), API 역공학</li>
+        <li>저작권자의 동의 없는 불법 저작물 배포 및 시험 문제지 유출 행위</li>
+      </ul>
+
+      <h3>제15조 (게시물의 권리와 저작권)</h3>
+      <p>회원이 작성한 게시물의 저작권은 회원 본인에게 귀속되며, 운영진은 서비스 내 정상적인 전시, 수식 변환, 비디오 스트리밍 처리를 위한 비독점적 이용권을 가집니다.</p>
+    </section>
+
+    <!-- 제5장 -->
+    <section id="ch5">
+      <h2>제5장 계약 해지 및 이용제한</h2>
+
+      <h3>제17조 (이용제한 및 자격 상실)</h3>
+      <p>약관 위반 시 위반 정도에 따라 <strong>1단계 주의/경고</strong> &rarr; <strong>2단계 일시 이용정지</strong> &rarr; <strong>3단계 영구 이용정지</strong> &rarr; <strong>4단계 학내 학생생활지도위원회 연계</strong>의 단계적 조치가 적용됩니다.</p>
+    </section>
+
+    <!-- 제6장 -->
+    <section id="ch6">
+      <h2>제6장 손해배상 및 면책</h2>
+
+      <h3>제20조 (면책조항)</h3>
+      <p>본 서비스는 학생 자율 개발 프로젝트로서 광고나 과금 없이 무상 제공되며, 천재지변, 외부 클라우드 장애, 공공데이터 오류, 회원 간 사적 분쟁으로 인한 손해에 대하여 운영진은 고의 또는 중과실이 없는 한 책임을 지지 않습니다.</p>
+
+      <h3>제21조 (분쟁 해결 및 관할법원)</h3>
+      <p>서비스 이용과 관련한 소송이 제기될 경우 충남과학고등학교 소재지를 관할하는 대전지방법원 공주지원을 제1심 전속관할법원으로 합니다.</p>
+    </section>
+
+    <!-- 부칙 -->
+    <section id="addendum">
+      <h2>부칙</h2>
+      <p><strong>제1조 (시행일)</strong> 본 약관은 2026년 11월 1일부터 시행됩니다.</p>
+      <p><strong>제2조 (경과조치)</strong> 약관 시행 이전에 접속하거나 가입한 이용자는 본 약관에 동의한 것으로 봅니다.</p>
+    </section>
+
+    <footer>
+      <div>
+        <strong>asterisk* Ecosystem</strong> | cnsh.life & cnsh.space<br />
+        운영: asterisk Contributors / Knoblab
+      </div>
+      <div>
+        문의: 커뮤니티 건의 게시판 또는 공식 GitHub
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
