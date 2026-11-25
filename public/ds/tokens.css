@@ -1,0 +1,604 @@
+/* ==========================================================================
+   asterisk* Design System — Design Tokens (Zero-Pollution Pure Variables)
+   Version: 1.1.0
+   Palette: Absolute Ink Black (#000000) & Base Paper White (#F7F6F2)
+   Shared SSOT for asterisk*, cnsh.space (chating-main), and cnsh.life (cnsh-eta).
+   Safe to import into any existing web project (contains no element resets).
+   ========================================================================== */
+
+:root {
+  /* ------------------------------------------------------------------------
+     1. Raw Static Palette (Non-Inverting Reference Values)
+     ------------------------------------------------------------------------ */
+  --raw-black: #000000;
+  --raw-carbon: #1C1C1E;
+  --raw-graphite: #48484A;
+  --raw-telemetry: #8E8E93;
+  --raw-silver: #D1D1D6;
+  --raw-vellum: #EBE9E1;
+  --raw-paper: #F7F6F2;
+  --raw-white: #FFFFFF;
+  --raw-ink-soft: #111111;
+
+  --raw-dark-graphite: #A0A19B;
+  --raw-dark-telemetry: #77777A;
+  --raw-dark-silver: #2C2C2E;
+  --raw-dark-vellum: #18191C;
+  --raw-dark-white: #111113;
+
+  --raw-knoblab: #556042;
+  --raw-knoblab-hover: #414A32;
+  --raw-knoblab-dark-accent: #8FA171;
+
+  --raw-sky-start: #101726;
+  --raw-sky-mid: #1E293B;
+  --raw-sky-end: #334155;
+
+  /* ------------------------------------------------------------------------
+     2. Core Monochrome Palette (Light Default — 7+1 Steps)
+     ------------------------------------------------------------------------ */
+  --color-black: var(--raw-black);
+  --color-carbon: var(--raw-carbon);
+  --color-graphite: var(--raw-graphite);
+  --color-telemetry: var(--raw-telemetry);
+  --color-silver: var(--raw-silver);
+  --color-vellum: var(--raw-vellum);
+  --color-paper: var(--raw-paper);
+  --color-white: var(--raw-white);
+
+  /* ------------------------------------------------------------------------
+     3. Semantic Color Aliases
+     ------------------------------------------------------------------------ */
+  --color-bg: var(--color-paper);
+  --color-surface: var(--color-vellum);
+  --color-surface-elevated: var(--color-white);
+  --color-fg: var(--color-black);
+  --color-fg-secondary: var(--color-graphite);
+  --color-fg-muted: var(--color-telemetry);
+  --color-fg-inverse: var(--color-paper);
+  --color-bg-inverse: var(--color-black);
+  --color-border: var(--color-black);
+  --color-border-subtle: var(--color-silver);
+  --color-border-strong: var(--color-graphite);
+
+  /* ------------------------------------------------------------------------
+     4. Brand Accents, Alpha & Overlays
+     ------------------------------------------------------------------------ */
+  --color-knoblab: var(--raw-knoblab);
+  --color-knoblab-hover: var(--raw-knoblab-hover);
+  --color-knoblab-on: var(--raw-white);
+  --color-knoblab-text: var(--raw-knoblab);
+  --color-knoblab-bg-subtle: rgba(85, 96, 66, 0.08);
+  --color-knoblab-border-subtle: rgba(85, 96, 66, 0.35);
+
+  --alpha-subtle: rgba(0, 0, 0, 0.04);
+  --alpha-soft: rgba(0, 0, 0, 0.08);
+  --alpha-medium: rgba(0, 0, 0, 0.14);
+  --alpha-strong: rgba(0, 0, 0, 0.22);
+  --alpha-on-dark-subtle: rgba(255, 255, 255, 0.08);
+  --alpha-on-dark-soft: rgba(255, 255, 255, 0.14);
+  --alpha-on-dark-medium: rgba(255, 255, 255, 0.2);
+
+  --color-backdrop: rgba(0, 0, 0, 0.6);
+  --color-divider-alpha: rgba(0, 0, 0, 0.15);
+  --color-inverse-subtle: rgba(247, 246, 242, 0.2);
+  --blur-backdrop: blur(4px);
+
+  /* ------------------------------------------------------------------------
+     5. Unified 7-Color Accent Palette (Korean Traditional Colors)
+        Dancheong Red · Ripe Persimmon · Canola Yellow · Mugwort Green
+        Celadon Blue · Indigo Blue · Gromwell Violet
+     ------------------------------------------------------------------------ */
+  --color-red: #A33A31;
+  --color-red-strong: #842C24;
+  --color-red-bg: rgba(163, 58, 49, 0.1);
+  --color-red-border: rgba(163, 58, 49, 0.32);
+
+  --color-persimmon: #C65D2B;
+  --color-persimmon-strong: #A1471D;
+  --color-persimmon-bg: rgba(198, 93, 43, 0.1);
+  --color-persimmon-border: rgba(198, 93, 43, 0.32);
+
+  --color-yellow: #E0A93B;
+  --color-yellow-bg: rgba(224, 169, 59, 0.14);
+  --color-yellow-border: rgba(224, 169, 59, 0.42);
+
+  --color-green: #556042;
+  --color-green-strong: #444E35;
+  --color-green-bg: rgba(85, 96, 66, 0.1);
+  --color-green-border: rgba(85, 96, 66, 0.32);
+
+  --color-celadon: #45707A;
+  --color-celadon-bg: rgba(69, 112, 122, 0.1);
+  --color-celadon-border: rgba(69, 112, 122, 0.32);
+
+  --color-indigo: #1F3A52;
+
+  --color-violet: #5C3C58;
+  --color-violet-bg: rgba(92, 60, 88, 0.1);
+  --color-violet-border: rgba(92, 60, 88, 0.32);
+
+  /* ------------------------------------------------------------------------
+     8. Surface Modes (Paper Light / Carbon Dark / Translucent Glass)
+     ------------------------------------------------------------------------ */
+  --surface-paper-bg: var(--raw-paper);
+  --surface-paper-fg: var(--raw-black);
+  --surface-paper-muted: var(--raw-graphite);
+  --surface-paper-border: var(--border-width-thin) solid var(--raw-black);
+
+  --surface-dark-bg: var(--raw-black);
+  --surface-dark-elevated: var(--raw-dark-vellum);
+  --surface-dark-fg: var(--raw-paper);
+  --surface-dark-muted: var(--raw-dark-graphite);
+  --surface-dark-border: var(--border-width-thin) solid var(--raw-black);
+
+  --surface-glass-bg: rgba(242, 246, 247, 0.72);
+  --surface-glass-bg-strong: rgba(242, 246, 247, 0.78);
+  --surface-glass-panel: rgba(242, 246, 247, 0.8);
+  --surface-glass-hover: rgba(235, 233, 225, 0.8);
+  --surface-glass-fg: var(--raw-black);
+  --surface-glass-muted: var(--raw-carbon);
+  --surface-glass-eyebrow: var(--raw-ink-soft);
+  --surface-glass-border: rgba(255, 255, 255, 0.45);
+  --surface-glass-blur: blur(14px) saturate(160%);
+  --surface-glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  --surface-sky-gradient: linear-gradient(135deg, var(--raw-sky-start) 0%, var(--raw-sky-mid) 55%, var(--raw-sky-end) 100%);
+
+  /* ------------------------------------------------------------------------
+     9. Typography & Wordmark
+     ------------------------------------------------------------------------ */
+  --font-sans: 'Asta Sans', 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Asta Sans', 'Pretendard', monospace;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --text-3xs: 9.5px;
+  --text-2xs: 10px;
+  --text-micro: 10.5px;
+  --text-xs: 11px;
+  --text-caption: 11.5px;
+  --text-sm: 12px;
+  --text-label: 12.5px;
+  --text-md: 13px;
+  --text-sub: 13.5px;
+  --text-base: 14px;
+  --text-prose: 14.5px;
+  --text-body-lg: 15px;
+  --text-lead: 17px;
+  --text-lg: 1.2rem;
+  --text-lg-plus: 1.22rem;
+  --text-xl: 1.35rem;
+  --text-xl-plus: 1.4rem;
+  --text-story-sm: 1.45rem;
+  --text-demo-light: 1.5rem;
+  --text-2xl: 1.55rem;
+  --text-2xl-plus: 1.65rem;
+  --text-now-value: 1.75rem;
+  --text-3xl: 1.85rem;
+  --text-4xl: 2rem;
+  --text-5xl: 2.2rem;
+  --text-hero-title: clamp(2.15rem, 8.5vw, 2.75rem);
+  --text-hero-title-sm: 3.8rem;
+  --text-hero-title-lg: 4.8rem;
+  --text-hero-wordmark: clamp(4.2rem, 18vw, 5.4rem);
+  --text-hero-wordmark-sm: 7.2rem;
+  --text-hero-wordmark-lg: 9.2rem;
+
+  --leading-wordmark: 0.85;
+  --leading-none: 1;
+  --leading-hero: 1.12;
+  --leading-tight: 1.15;
+  --leading-badge: 1.2;
+  --leading-heading: 1.25;
+  --leading-snug: 1.35;
+  --leading-timeline: 1.4;
+  --leading-sub: 1.42;
+  --leading-caption: 1.45;
+  --leading-normal: 1.5;
+  --leading-compact: 1.55;
+  --leading-body: 1.6;
+  --leading-relaxed: 1.65;
+  --leading-editorial: 1.7;
+  --leading-prose: 1.75;
+  --leading-loose: 1.8;
+
+  --tracking-wordmark: -0.06em;
+  --tracking-wordmark-inline: -0.05em;
+  --tracking-display: -0.04em;
+  --tracking-heading: -0.03em;
+  --tracking-sub: -0.025em;
+  --tracking-tight: -0.01em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.02em;
+  --tracking-table: 0.03em;
+  --tracking-wider: 0.04em;
+  --tracking-caps: 0.05em;
+  --tracking-widest: 0.08em;
+
+  --wordmark-size-mobile: 20px;
+  --wordmark-size-desktop: 22px;
+  --wordmark-inline-size: 21px;
+  --wordmark-mobile-y: -2px;
+  --wordmark-star-size: 0.85em;
+  --wordmark-star-weight: var(--font-weight-regular);
+  --wordmark-star-offset: 0.12em;
+  --wordmark-star-gap: 2px;
+  --wordmark-hero-star-gap: 6px;
+
+  /* ------------------------------------------------------------------------
+     10. Spacing Scale
+     ------------------------------------------------------------------------ */
+  --space-0: 0px;
+  --space-px: 1px;
+  --space-0-5: 2px;
+  --space-0-75: 3px;
+  --space-1: 4px;
+  --space-1-25: 5px;
+  --space-1-5: 6px;
+  --space-1-75: 7px;
+  --space-2: 8px;
+  --space-2-25: 9px;
+  --space-2-5: 10px;
+  --space-2-75: 11px;
+  --space-3: 12px;
+  --space-3-5: 14px;
+  --space-4: 16px;
+  --space-4-5: 18px;
+  --space-5: 20px;
+  --space-5-5: 22px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-9: 36px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-13: 52px;
+  --space-14: 56px;
+  --space-16: 64px;
+  --space-17: 68px;
+  --space-18: 72px;
+  --space-22: 88px;
+  --space-25: 100px;
+
+  /* ------------------------------------------------------------------------
+     11. Layout & Breakpoints
+     ------------------------------------------------------------------------ */
+  --max-content-width: 1200px;
+  --max-doc-width: 860px;
+  --header-height-mobile: 56px;
+  --header-height-desktop: 64px;
+  --header-height: var(--header-height-mobile);
+  --container-px-mobile: 20px;
+  --container-px-desktop: 24px;
+  --container-px: var(--container-px-mobile);
+  --drawer-width: 300px;
+  --drawer-max-width: 85%;
+  --ticker-height: 36px;
+
+  --bp-sm: 640px;
+  --bp-md: 768px;
+  --bp-lg: 860px;
+  --bp-xl: 1024px;
+
+  /* ------------------------------------------------------------------------
+     12. Borders & Radii
+     ------------------------------------------------------------------------ */
+  --border-width-thin: 1px;
+  --border-width-medium: 2px;
+  --border-width-thick: 3px;
+  --border-width-accent: 4px;
+
+  --border-main: var(--border-width-thin) solid var(--color-black);
+  --border-sub: var(--border-width-thin) solid var(--color-silver);
+  --border-dark: var(--border-width-thin) solid var(--color-graphite);
+  --border-double-gap: 5px;
+
+  --radius-none: 0px;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-xl: 8px;
+  --radius-pill: 9999px;
+  --radius-full: 50%;
+
+  /* ------------------------------------------------------------------------
+     13. Elevation & Shadows
+     ------------------------------------------------------------------------ */
+  --shadow-subtle: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-elevated: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-brutal: 6px 6px 0 rgba(0, 0, 0, 0.2);
+  --shadow-drawer: -10px 0 30px rgba(0, 0, 0, 0.15);
+  --shadow-toast: 0 10px 25px rgba(0, 0, 0, 0.2);
+  --shadow-glass: var(--surface-glass-shadow);
+  --shadow-focus-ring: inset 0 0 0 1px var(--color-black);
+
+  /* ------------------------------------------------------------------------
+     14. Motion & Transitions
+     ------------------------------------------------------------------------ */
+  --duration-fast: 150ms;
+  --duration-theme: 180ms;
+  --duration-normal: 200ms;
+  --duration-page: 220ms;
+  --duration-pulse: 2000ms;
+
+  --ease-default: ease;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: ease-in-out;
+
+  --transition-fast: all var(--duration-fast) var(--ease-default);
+  --transition-normal: all var(--duration-normal) var(--ease-default);
+  --transition-colors: background-color var(--duration-theme) var(--ease-default), color var(--duration-theme) var(--ease-default), border-color var(--duration-theme) var(--ease-default);
+
+  /* ------------------------------------------------------------------------
+     15. Z-Index Scale
+     ------------------------------------------------------------------------ */
+  --z-base: 1;
+  --z-elevated: 2;
+  --z-ticker: 90;
+  --z-sticky: 100;
+  --z-overlay: 900;
+  --z-drawer: 1000;
+  --z-toast: 1100;
+
+  /* ------------------------------------------------------------------------
+     16. Component Tokens (Layer 3)
+     ------------------------------------------------------------------------ */
+  --btn-py-sm: var(--space-1-5);
+  --btn-px-sm: var(--space-3);
+  --btn-py: var(--space-2);
+  --btn-px: var(--space-3-5);
+  --btn-py-lg: var(--space-2-5);
+  --btn-px-lg: var(--space-4-5);
+  --btn-gap: var(--space-1-5);
+  --btn-sso-gap: var(--space-2);
+  --btn-font-size: var(--text-sm);
+  --btn-font-weight: var(--font-weight-semibold);
+  --btn-radius: var(--radius-sm);
+
+  --nav-item-height: 32px;
+  --nav-item-py: var(--space-1-5);
+  --nav-item-px: var(--space-3);
+  --nav-item-font-size: var(--text-md);
+  --nav-item-radius: var(--radius-sm);
+
+  --class-badge-py: var(--space-1-5);
+  --class-badge-px: var(--space-3-5);
+  --class-badge-font-size: var(--text-label);
+
+  --badge-height: 22px;
+  --badge-height-sm: 20px;
+  --badge-px: var(--space-2);
+  --badge-gap: var(--space-1-25);
+  --badge-font-size: var(--text-xs);
+  --badge-radius: var(--radius-sm);
+  --badge-dot-size: 5px;
+
+  --filter-py: var(--space-1-25);
+  --filter-px: var(--space-3);
+  --filter-font-size: var(--text-caption);
+  --filter-radius: var(--radius-sm);
+
+  --toggle-width: 44px;
+  --toggle-height: 24px;
+  --toggle-knob-size: 16px;
+  --toggle-knob-offset: 3px;
+  --toggle-translate-x: 19px;
+  --toggle-radius: var(--radius-pill);
+  --toggle-duration: var(--duration-normal);
+
+  --input-py: var(--space-1-5);
+  --input-py-mobile: var(--space-1-75);
+  --input-px: var(--space-2-5);
+  --input-font-size: var(--text-sm);
+  --input-radius: var(--radius-sm);
+  --input-search-width: 150px;
+  --input-search-width-focus: 210px;
+
+  --card-padding: var(--space-5);
+  --card-padding-sm: var(--space-4);
+  --card-gap: var(--space-4);
+  --now-dot-size: 6px;
+  --now-progress-height: 4px;
+  --table-cell-py: var(--space-3-5);
+  --table-cell-px: var(--space-4);
+  --timeline-dot-size: 14px;
+  --timeline-track-width: 2px;
+  --status-pill-height: 24px;
+  --contact-pill-height: 26px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --header-height: var(--header-height-desktop);
+    --container-px: var(--container-px-desktop);
+  }
+}
+
+/* ==========================================================================
+   Dark Theme Overrides (Manual: [data-theme='dark'])
+   ========================================================================== */
+[data-theme='dark'] {
+  --color-black: var(--raw-paper);
+  --color-carbon: var(--raw-vellum);
+  --color-graphite: var(--raw-dark-graphite);
+  --color-telemetry: var(--raw-dark-telemetry);
+  --color-silver: var(--raw-dark-silver);
+  --color-vellum: var(--raw-dark-vellum);
+  --color-paper: var(--raw-black);
+  --color-white: var(--raw-dark-white);
+
+  --color-bg: var(--color-paper);
+  --color-surface: var(--color-vellum);
+  --color-surface-elevated: var(--color-white);
+  --color-fg: var(--color-black);
+  --color-fg-secondary: var(--color-graphite);
+  --color-fg-muted: var(--color-telemetry);
+  --color-fg-inverse: var(--color-paper);
+  --color-bg-inverse: var(--color-black);
+  --color-border: var(--color-black);
+  --color-border-subtle: var(--color-silver);
+  --color-border-strong: var(--color-graphite);
+
+  --border-main: var(--border-width-thin) solid var(--color-black);
+  --border-sub: var(--border-width-thin) solid var(--color-silver);
+  --border-dark: var(--border-width-thin) solid var(--color-graphite);
+
+  --color-knoblab-text: var(--raw-knoblab-dark-accent);
+  --color-knoblab-bg-subtle: rgba(143, 161, 113, 0.14);
+  --color-knoblab-border-subtle: rgba(143, 161, 113, 0.4);
+
+  --alpha-subtle: rgba(255, 255, 255, 0.05);
+  --alpha-soft: rgba(255, 255, 255, 0.08);
+  --alpha-medium: rgba(255, 255, 255, 0.14);
+  --alpha-strong: rgba(255, 255, 255, 0.22);
+
+  --color-backdrop: rgba(0, 0, 0, 0.78);
+  --color-divider-alpha: rgba(247, 246, 242, 0.18);
+  --color-inverse-subtle: rgba(0, 0, 0, 0.2);
+
+  --color-red: #D86E65;
+  --color-red-strong: #E38880;
+  --color-red-bg: rgba(216, 110, 101, 0.16);
+  --color-red-border: rgba(216, 110, 101, 0.38);
+
+  --color-persimmon: #E08659;
+  --color-persimmon-strong: #EBA07A;
+  --color-persimmon-bg: rgba(224, 134, 89, 0.16);
+  --color-persimmon-border: rgba(224, 134, 89, 0.38);
+
+  --color-yellow: #E0A93B;
+  --color-yellow-bg: rgba(224, 169, 59, 0.16);
+  --color-yellow-border: rgba(224, 169, 59, 0.38);
+
+  --color-green: #8FA171;
+  --color-green-strong: #A4B587;
+  --color-green-bg: rgba(143, 161, 113, 0.16);
+  --color-green-border: rgba(143, 161, 113, 0.38);
+
+  --color-celadon: #7BA8B3;
+  --color-celadon-bg: rgba(123, 168, 179, 0.16);
+  --color-celadon-border: rgba(123, 168, 179, 0.38);
+
+  --color-indigo: #94BFC9;
+
+  --color-violet: #A67FA1;
+  --color-violet-bg: rgba(166, 127, 161, 0.16);
+  --color-violet-border: rgba(166, 127, 161, 0.38);
+
+  --surface-glass-bg: rgba(24, 25, 28, 0.72);
+  --surface-glass-bg-strong: rgba(24, 25, 28, 0.82);
+  --surface-glass-panel: rgba(24, 25, 28, 0.84);
+  --surface-glass-hover: rgba(44, 44, 46, 0.85);
+  --surface-glass-fg: var(--raw-paper);
+  --surface-glass-muted: var(--raw-dark-graphite);
+  --surface-glass-eyebrow: var(--raw-vellum);
+  --surface-glass-border: rgba(255, 255, 255, 0.16);
+  --surface-glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+
+  --shadow-subtle: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.45);
+  --shadow-elevated: 0 8px 24px rgba(0, 0, 0, 0.6);
+  --shadow-brutal: 6px 6px 0 rgba(247, 246, 242, 0.16);
+  --shadow-drawer: -10px 0 30px rgba(0, 0, 0, 0.55);
+  --shadow-toast: 0 10px 25px rgba(0, 0, 0, 0.6);
+  --shadow-glass: var(--surface-glass-shadow);
+  --shadow-focus-ring: inset 0 0 0 1px var(--color-black);
+}
+
+/* ==========================================================================
+   Dark Theme Overrides (Opt-In OS Auto: <html data-theme="auto">)
+   ========================================================================== */
+@media (prefers-color-scheme: dark) {
+  :root[data-theme='auto'] {
+    --color-black: var(--raw-paper);
+    --color-carbon: var(--raw-vellum);
+    --color-graphite: var(--raw-dark-graphite);
+    --color-telemetry: var(--raw-dark-telemetry);
+    --color-silver: var(--raw-dark-silver);
+    --color-vellum: var(--raw-dark-vellum);
+    --color-paper: var(--raw-black);
+    --color-white: var(--raw-dark-white);
+
+    --color-bg: var(--color-paper);
+    --color-surface: var(--color-vellum);
+    --color-surface-elevated: var(--color-white);
+    --color-fg: var(--color-black);
+    --color-fg-secondary: var(--color-graphite);
+    --color-fg-muted: var(--color-telemetry);
+    --color-fg-inverse: var(--color-paper);
+    --color-bg-inverse: var(--color-black);
+    --color-border: var(--color-black);
+    --color-border-subtle: var(--color-silver);
+    --color-border-strong: var(--color-graphite);
+
+    --border-main: var(--border-width-thin) solid var(--color-black);
+    --border-sub: var(--border-width-thin) solid var(--color-silver);
+    --border-dark: var(--border-width-thin) solid var(--color-graphite);
+
+    --color-knoblab-text: var(--raw-knoblab-dark-accent);
+    --color-knoblab-bg-subtle: rgba(143, 161, 113, 0.14);
+    --color-knoblab-border-subtle: rgba(143, 161, 113, 0.4);
+
+    --alpha-subtle: rgba(255, 255, 255, 0.05);
+    --alpha-soft: rgba(255, 255, 255, 0.08);
+    --alpha-medium: rgba(255, 255, 255, 0.14);
+    --alpha-strong: rgba(255, 255, 255, 0.22);
+
+    --color-backdrop: rgba(0, 0, 0, 0.78);
+    --color-divider-alpha: rgba(247, 246, 242, 0.18);
+    --color-inverse-subtle: rgba(0, 0, 0, 0.2);
+
+    --color-red: #D86E65;
+    --color-red-strong: #E38880;
+    --color-red-bg: rgba(216, 110, 101, 0.16);
+    --color-red-border: rgba(216, 110, 101, 0.38);
+
+    --color-persimmon: #E08659;
+    --color-persimmon-strong: #EBA07A;
+    --color-persimmon-bg: rgba(224, 134, 89, 0.16);
+    --color-persimmon-border: rgba(224, 134, 89, 0.38);
+
+    --color-yellow: #E0A93B;
+    --color-yellow-bg: rgba(224, 169, 59, 0.16);
+    --color-yellow-border: rgba(224, 169, 59, 0.38);
+
+    --color-green: #8FA171;
+    --color-green-strong: #A4B587;
+    --color-green-bg: rgba(143, 161, 113, 0.16);
+    --color-green-border: rgba(143, 161, 113, 0.38);
+
+    --color-celadon: #7BA8B3;
+    --color-celadon-bg: rgba(123, 168, 179, 0.16);
+    --color-celadon-border: rgba(123, 168, 179, 0.38);
+
+    --color-indigo: #94BFC9;
+
+    --color-violet: #A67FA1;
+    --color-violet-bg: rgba(166, 127, 161, 0.16);
+    --color-violet-border: rgba(166, 127, 161, 0.38);
+
+    --surface-glass-bg: rgba(24, 25, 28, 0.72);
+    --surface-glass-bg-strong: rgba(24, 25, 28, 0.82);
+    --surface-glass-panel: rgba(24, 25, 28, 0.84);
+    --surface-glass-hover: rgba(44, 44, 46, 0.85);
+    --surface-glass-fg: var(--raw-paper);
+    --surface-glass-muted: var(--raw-dark-graphite);
+    --surface-glass-eyebrow: var(--raw-vellum);
+    --surface-glass-border: rgba(255, 255, 255, 0.16);
+    --surface-glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+
+    --shadow-subtle: 0 1px 2px rgba(0, 0, 0, 0.35);
+    --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.45);
+    --shadow-elevated: 0 8px 24px rgba(0, 0, 0, 0.6);
+    --shadow-brutal: 6px 6px 0 rgba(247, 246, 242, 0.16);
+    --shadow-drawer: -10px 0 30px rgba(0, 0, 0, 0.55);
+    --shadow-toast: 0 10px 25px rgba(0, 0, 0, 0.6);
+    --shadow-glass: var(--surface-glass-shadow);
+    --shadow-focus-ring: inset 0 0 0 1px var(--color-black);
+  }
+}
